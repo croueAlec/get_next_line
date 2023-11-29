@@ -6,7 +6,7 @@
 /*   By: acroue <acroue@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 17:44:01 by acroue            #+#    #+#             */
-/*   Updated: 2023/11/28 17:44:01 by acroue           ###   ########.fr       */
+/*   Updated: 2023/11/29 10:31:03 by acroue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 #include <stdio.h>
 
-int	is_newline(char *new)
+int	is_newline(char *str)
 {
 	int	i;
 
 	i = -1;
-	if (!new)
+	if (!str)
 		return (0);
-	while (new[++i])
-		if (new[i] == '\n')
+	while (str[++i])
+		if (str[i] == '\n')
 			return (i + 1);
 	return (0);
 }

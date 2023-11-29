@@ -6,11 +6,11 @@
 /*   By: acroue <acroue@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 17:44:01 by acroue            #+#    #+#             */
-/*   Updated: 2023/11/28 18:07:24 by acroue           ###   ########.fr       */
+/*   Updated: 2023/11/29 10:30:37 by acroue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 #include <stdio.h>
 
@@ -27,7 +27,7 @@ int	is_newline(char *str)
 	return (0);
 }
 
-int	read_buffer(int fd, char *buffer[MAX_FD])
+int	read_buffer(int fd, char **buffer)
 {
 	if (buffer[0][fd] != '\0')
 	{
@@ -66,7 +66,7 @@ char	*get_next_line(int fd)
 	int			nl;
 
 	tmp = NULL;
-	while ((!is_newline(tmp)) && read_buffer(fd, (char *)buffer[fd]) > 0)
+	while ((!is_newline(tmp)) && read_buffer(fd, (char **)buffer[fd]) > 0)
 	{
 		nl = is_newline(buffer[fd]);
 		tmp = ft_strnjoin(tmp, buffer[fd], nl);
