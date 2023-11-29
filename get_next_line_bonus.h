@@ -6,7 +6,7 @@
 /*   By: acroue <acroue@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:58:45 by acroue            #+#    #+#             */
-/*   Updated: 2023/11/29 10:31:35 by acroue           ###   ########.fr       */
+/*   Updated: 2023/11/29 10:54:45 by acroue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
-
 
 # ifndef MAX_FD
 #  define MAX_FD 1024
