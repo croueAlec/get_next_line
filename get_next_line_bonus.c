@@ -12,8 +12,6 @@
 
 #include "get_next_line_bonus.h"
 
-#include <stdio.h>
-
 int	is_newline(char *str)
 {
 	int	i;
